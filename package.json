@@ -1,0 +1,20 @@
+{
+  "name": "mini-mani-test-bot",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Private Mini Mani WhatsApp test bot with a stylish pairing dashboard",
+  "scripts": {
+    "start": "node index.js",
+    "check": "node --check index.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "baileys": "7.0.0-rc14",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2"
+  }
+}
