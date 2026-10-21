@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080b18">
+  <title>Mini Mani — Control Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="glow glow-a"></div><div class="glow glow-b"></div>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-icon">M</span><span>MINI <b>MANI</b><small>WHATSAPP LAB</small></span></a>
+    <span class="private-pill"><i></i> PRIVATE TEST PANEL</span>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="spark">✦</span> NEXT-GEN WHATSAPP AUTOMATION</div>
+        <h1>Your bot.<br><span>Your control.</span></h1>
+        <p class="lead">A clean, private test dashboard for pairing Mini Mani, checking connection status, and trying its core commands.</p>
+        <div class="hero-actions"><a class="primary-btn" href="#connect">Connect WhatsApp <span>↗</span></a><a class="text-btn" href="#commands">Explore commands ↓</a></div>
+        <div class="hero-note"><span class="pulse"></span> Built for personal testing · Baileys v7 RC14</div>
+      </div>
+      <div class="orbital">
+        <div class="orbit orbit-1"></div><div class="orbit orbit-2"></div><div class="orbit orbit-3"></div>
+        <div class="core"><div class="core-mark">M<span>✦</span></div><strong>MINI MANI</strong><small>ONLINE COMPANION</small></div>
+        <div class="float-card card-top"><span class="tiny-dot green"></span> Secure panel <b>01</b></div>
+        <div class="float-card card-bottom"><span class="tiny-dot purple"></span> Pairing console <b>02</b></div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <article class="stat"><span class="stat-icon">⌁</span><div><small>LIBRARY</small><strong>Baileys <em>7.0.0-rc14</em></strong></div></article>
+      <article class="stat"><span class="stat-icon">◈</span><div><small>BOT STATUS</small><strong id="stat-state">Not connected</strong></div></article>
+      <article class="stat"><span class="stat-icon">⌘</span><div><small>CORE COMMANDS</small><strong>05 Ready</strong></div></article>
+    </section>
+
+    <section id="connect" class="section connect-grid">
+      <div class="section-heading"><div class="eyebrow">01 / PAIRING CONSOLE</div><h2>Bring your bot <span>online.</span></h2><p>Log in to your private panel, then request a pairing code for your own WhatsApp account.</p></div>
+      <div class="panel">
+        <div class="panel-head"><div><span class="live-dot"></span><b>Connection console</b></div><span class="panel-tag">PRIVATE</span></div>
+        <form id="login-form" class="form">
+          <label for="password">Panel password</label>
+          <input id="password" type="password" autocomplete="current-password" placeholder="Enter your private panel password" required>
+          <button class="button button-secondary" type="submit">Unlock dashboard <span>→</span></button>
+        </form>
+        <div id="pair-area" class="hidden">
+          <div class="status-line"><span id="status-dot" class="status-dot"></span><span id="status-text">Checking connection…</span><button id="refresh" class="refresh" type="button" title="Refresh status">↻</button></div>
+          <form id="pair-form" class="form">
+            <label for="phone">WhatsApp number <small>with country code</small></label>
+            <input id="phone" inputmode="numeric" autocomplete="tel" placeholder="923001234567" required>
+            <p class="hint">Digits only, including country code. Never share your pairing code with anyone.</p>
+            <button class="button" type="submit">Generate pairing code <span>↗</span></button>
+          </form>
+          <div id="code-box" class="code-box hidden"><small>YOUR PAIRING CODE</small><strong id="pair-code">----</strong><p>On your phone: WhatsApp → Linked devices → Link a device → Link with phone number.</p></div>
+          <button id="logout" class="logout" type="button">Lock panel</button>
+          <p id="panel-message" class="message" role="status"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="commands">
+      <div class="section-heading"><div class="eyebrow">02 / COMMAND DECK</div><h2>Small commands. <span>Fast checks.</span></h2><p>Send these commands in a WhatsApp chat with your connected bot.</p></div>
+      <div class="command-grid">
+        <article class="command"><div class="cmd-icon">⌁</div><div class="cmd-top"><code>!menu</code><span>GENERAL</span></div><h3>Command menu</h3><p>Shows the available commands and quick help.</p></article>
+        <article class="command"><div class="cmd-icon">ϟ</div><div class="cmd-top"><code>!ping</code><span>TEST</span></div><h3>Response check</h3><p>Confirms that the bot is receiving and replying.</p></article>
+        <article class="command"><div class="cmd-icon">◉</div><div class="cmd-top"><code>!alive</code><span>STATUS</span></div><h3>Bot status</h3><p>Returns online status and process uptime.</p></article>
+        <article class="command"><div class="cmd-icon">ⓘ</div><div class="cmd-top"><code>!about</code><span>INFO</span></div><h3>About Mini Mani</h3><p>Displays the test bot and library information.</p></article>
+        <article class="command"><div class="cmd-icon">♔</div><div class="cmd-top"><code>!owner</code><span>CONTACT</span></div><h3>Owner contact</h3><p>Shows the owner name and WhatsApp contact link.</p></article>
+      </div>
+    </section>
+
+    <section class="section feature-section">
+      <div class="section-heading"><div class="eyebrow">03 / WHAT'S INSIDE</div><h2>Made to <span>test first.</span></h2></div>
+      <div class="feature-grid">
+        <div class="feature"><span>01</span><div><h3>Pairing dashboard</h3><p>Request a phone-number pairing code from the private web panel.</p></div></div>
+        <div class="feature"><span>02</span><div><h3>Connection monitor</h3><p>View current status, saved-session detection, and connection errors.</p></div></div>
+        <div class="feature"><span>03</span><div><h3>Basic command suite</h3><p>Five low-risk commands to validate the message handler.</p></div></div>
+        <div class="feature"><span>04</span><div><h3>Session persistence</h3><p>Auth files are stored locally so the bot can reconnect after restart.</p></div></div>
+      </div>
+      <div class="notice"><span>!</span><p><b>Test build:</b> Baileys v7 RC14 is a release candidate, not a final stable release. Keep this panel private, use a test account if possible, and never publish your <code>.env</code> or <code>auth_info</code> folder.</p></div>
+    </section>
+    <footer><a class="brand footer-brand" href="#"><span class="brand-icon">M</span><span>MINI <b>MANI</b><small>WHATSAPP LAB</small></span></a><div>Owner <b>Mani</b> · <a href="https://wa.me/923134169814" target="_blank" rel="noreferrer">Contact owner ↗</a></div><small class="copyright">Independent community project. Not affiliated with WhatsApp or Meta.</small></footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
